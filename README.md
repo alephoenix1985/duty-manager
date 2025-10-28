@@ -49,6 +49,16 @@ This command will install all dependencies for both the `frontend` and `backend`
 
 The backend requires a PostgreSQL database. Ensure your PostgreSQL instance is running and that the credentials in `apps/backend/src/db.ts` are correct.
 
+The database connection parameters are configured via environment variables. The following variables are used:
+
+*   `DB_USER`: PostgreSQL username (default: `postgres`)
+*   `DB_HOST`: Database host (default: `localhost`)
+*   `DB_NAME`: Database name (default: `duties`)
+*   `DB_PASSWORD`: Database password (default: `postgres`)
+*   `DB_PORT`: Database port (default: `5433`)
+
+You can set these environment variables to connect to your desired PostgreSQL instance.
+
 ### 3. Database Initialization
 
 To create the `duties` table required for the application, run the following script from the monorepo root:
