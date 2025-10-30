@@ -39,7 +39,6 @@ export const useApi = <T>(
           message: "API Error",
           description: errorNotification || apiError.message,
         });
-        throw apiError;
       } finally {
         setLoading(false);
       }
